@@ -1,6 +1,23 @@
 /* RESET */
 img {
     max-width: 100%;
+    max-height: 100%;
+}
+
+.col-3, .col-9 {
+    padding: 0;
+}
+
+/* VARIABLES */
+:root {
+    /* colors */
+    --notification-color: #8EDAFC;
+    --sent-message-color: #D5F9BA;
+    /* sizes */
+    --header-footer-height: 7.5vh;
+    --notifications-height: 10vh;
+    --search-height: 4vh;
+    --contact-box-height: 10vh;
 }
 
 /* COMMON */
@@ -10,7 +27,7 @@ img {
     position: relative;
 
     /* debug */
-    background-color: aqua;
+    background-color: lightgreen;
 }
 
 .ms_wrapper {
@@ -24,8 +41,7 @@ img {
     z-index: 999;
 }
 
-
-/* MAIN */
+/* CONTACTS SECTION */
 .ms_contacts-section {
     width: 100%;
     height: 100%;
@@ -33,6 +49,66 @@ img {
     background-color: blueviolet;
 }
 
+
+.ms-contacts-header, .ms_messages-header, .ms_footer-messages {
+    height: var(--header-footer-height);
+    width: 100%;
+    margin: 0;
+    
+    /* debug */
+    background-color: lightcoral;
+    border: 1px dashed black;
+}
+
+.ms_notifications {
+    height: var(--notifications-height);
+    background-color: #8EDAFC;
+}
+
+.ms_search-newchat {
+    height:var(--search-height);
+    
+    /* debug */
+    background-color: blue;
+}
+
+.ms_contact-list {
+    height: calc(100% - var(--header-footer-height) - var(--notifications-height) - var(--search-height));
+    overflow-y: scroll;
+}
+
+.ms_contact-box {
+    height: var(--contact-box-height);
+    position: relative;
+
+    /* debug */
+    background-color: lightsalmon;
+    border: 1px dashed black;
+}
+
+.ms_profile-image img {
+    width: 80%;
+    border-radius: 50%;
+}
+
+.ms_time {
+    font-size: 0.7rem;
+    color: gray;
+    position: absolute;
+    top: 5%;
+    right: 5%;
+}
+
+.ms_box-text, .ms_time {
+    padding-top: .2rem;
+}
+
+.ms_last-message {
+    font-size: 0.6rem;
+    color: gray;
+}
+
+/* MESSAGES SECTION */
 .ms_messages-section {
     width: 100%;
     height: 100%;
@@ -40,4 +116,9 @@ img {
     background-color: blue;
 }
 
+.ms_main-messages {
+    height: calc(100% - 2*var(--header-footer-height));
+    background-image: url(../img/mine.jpg);
+    overflow-y: scroll;
+}
 /* UTILITIES */
