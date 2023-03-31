@@ -57,9 +57,6 @@ img {
     height: var(--header-footer-height);
     width: 100%;
     margin: 0;
-    
-    /* debug */
-    border: 1px dashed black;
 }
 
 /* CONTACTS SECTION */
@@ -164,6 +161,10 @@ img {
 
 .ms_footer-messages {
     border-left: 1px solid lightgray;
+}
+
+.ms_footer-input {
+    border-color: white;
 }
 
 /* UTILITIES */
