@@ -43,6 +43,25 @@ img {
     z-index: 999;
 }
 
+.ms_undername {
+    font-size: 0.7rem;
+    color: gray;
+}
+
+.ms_icon {
+    color: gray;
+    padding: 0 .4rem;
+}
+
+.ms-contacts-header, .ms_messages-header, .ms_footer-messages {
+    height: var(--header-footer-height);
+    width: 100%;
+    margin: 0;
+    
+    /* debug */
+    border: 1px dashed black;
+}
+
 /* CONTACTS SECTION */
 .ms_contacts-section {
     width: 100%;
@@ -55,11 +74,6 @@ img {
 
 .ms_profile-image {
     height: 80%;
-    padding: 0 .3rem;
-}
-
-.ms_icon {
-    color: gray;
     padding: 0 .3rem;
 }
 
@@ -84,13 +98,8 @@ img {
     color: gray;
 }
 
-.ms-contacts-header, .ms_messages-header, .ms_footer-messages {
-    height: var(--header-footer-height);
-    width: 100%;
-    margin: 0;
-    
-    /* debug */
-    border: 1px dashed black;
+.ms-contacts-header {
+    border-right: 1px solid lightgray;
 }
 
 .ms_notifications {
@@ -140,10 +149,6 @@ img {
     padding: .2rem .4rem;
 }
 
-.ms_last-message {
-    font-size: 0.6rem;
-    color: gray;
-}
 
 /* MESSAGES SECTION */
 .ms_messages-section {
@@ -155,6 +160,10 @@ img {
     height: calc(100% - 2*var(--header-footer-height));
     background-image: url(../img/mine.jpg);
     overflow-y: scroll;
+}
+
+.ms_footer-messages {
+    border-left: 1px solid lightgray;
 }
 
 /* UTILITIES */
