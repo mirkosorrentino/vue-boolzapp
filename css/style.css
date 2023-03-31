@@ -64,6 +64,27 @@ img {
     padding: 0 .3rem;
 }
 
+.ms_notifications-icon {
+    background-color: white;
+    color: var(--notification-color);
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    margin: 0 .5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ms_notification-text {
+    font-size: .8rem;
+}
+
+.ms_notifications-link {
+    font-size: .7rem;
+    color: gray;
+}
+
 .ms-contacts-header, .ms_messages-header, .ms_footer-messages {
     height: var(--header-footer-height);
     width: 100%;
