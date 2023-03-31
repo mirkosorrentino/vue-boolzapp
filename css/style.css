@@ -2,6 +2,7 @@
 img {
     max-width: 100%;
     max-height: 100%;
+    border-radius: 50%;
 }
 
 .col-3, .col-9 {
@@ -49,6 +50,19 @@ img {
     background-color: blueviolet;
 }
 
+.ms_photo-name {
+    height: 100%;
+}
+
+.ms_profile-image {
+    height: 80%;
+    padding: 0 .3rem;
+}
+
+.ms_icon {
+    color: gray;
+    padding: 0 .3rem;
+}
 
 .ms-contacts-header, .ms_messages-header, .ms_footer-messages {
     height: var(--header-footer-height);
@@ -86,9 +100,8 @@ img {
     border: 1px dashed black;
 }
 
-.ms_profile-image img {
-    width: 80%;
-    border-radius: 50%;
+.ms_contact-image {
+    height: 80%;
 }
 
 .ms_time {
@@ -96,11 +109,11 @@ img {
     color: gray;
     position: absolute;
     top: 5%;
-    right: 5%;
+    right: 0;
 }
 
 .ms_box-text, .ms_time {
-    padding-top: .2rem;
+    padding: .2rem .4rem;
 }
 
 .ms_last-message {
@@ -121,4 +134,5 @@ img {
     background-image: url(../img/mine.jpg);
     overflow-y: scroll;
 }
+
 /* UTILITIES */
