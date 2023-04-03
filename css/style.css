@@ -129,6 +129,7 @@ img {
 .ms_contact-list {
     height: calc(100% - var(--header-footer-height) - var(--notifications-height) - var(--search-height));
     overflow-y: scroll;
+    cursor: pointer;
 }
 
 .ms_contact-box {

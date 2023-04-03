@@ -4,6 +4,7 @@ createApp({
     data(){
         return{
             activeIndex: 0,
+            newMessage: "",
             contacts: [
                 {
                     name: 'Michele',
@@ -174,6 +175,10 @@ createApp({
     methods: {
         changeChat(index) {
             this.activeIndex = index;
+        },
+
+        addNewMessage() {
+            
         }
     },
 }).mount("#app")
