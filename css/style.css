@@ -134,9 +134,6 @@ img {
 .ms_contact-box {
     height: var(--contact-box-height);
     position: relative;
-
-    /* debug */
-    border: 1px dashed black;
 }
 
 .ms_time {
@@ -187,25 +184,22 @@ img {
     margin: 0 50px;
     border-radius: 7px;
     word-wrap: break-word;
-
-    /* debug */
-    background-color: green;
 }
 
 .ms_message-row.received {
     justify-content: start;
 }
 
-.ms_message-row.send {
+.ms_message-row.sent {
     justify-content: end;
 }
 
-.send .message {
+.sent .ms_message-square {
     /* debug */
     background-color: lightgreen;
 }
 
-.received .message {
+.received .ms_message-square {
     /* debug */
     background-color: white;
 }

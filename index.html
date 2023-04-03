@@ -85,9 +85,9 @@
                         </div>
                     </div>
                     <div class="ms_main-messages">
-                        <div class="ms_message-row send">
+                        <div class="ms_message-row" v-for="message in contacts[activeIndex].messages" :class="`${message.status}`">
                             <div class="ms_message-square">
-                                CIAO
+                                {{message.message}}
                             </div>
                         </div>
                     </div>
