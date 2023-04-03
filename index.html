@@ -53,7 +53,7 @@
                           </div>
                     </div>
                     <div class="ms_contact-list">
-                        <div class="ms_contact-box d-flex align-items-center" v-for="(contact,index) in contacts">
+                        <div class="ms_contact-box d-flex align-items-center" v-for="(contact,index) in contacts" @click="changeChat(index)">
                             <div class="ms_contact-image">
                                 <img :src="`img/avatar${contact.avatar}.jpg`" alt="">
                             </div>
