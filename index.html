@@ -53,97 +53,27 @@
                           </div>
                     </div>
                     <div class="ms_contact-list">
-                        <div class="ms_contact-box d-flex">
+                        <div class="ms_contact-box d-flex align-items-center" v-for="(contact,index) in contacts">
                             <div class="ms_contact-image">
-                                <img src="img/avatar_1.jpg" alt="">
+                                <img :src="`img/avatar${contact.avatar}.jpg`" alt="">
                             </div>
-                            <div class="ms_box-text">
-                                <div class="ms_name">Michele</div>
+                            <div class="ms_box-text align-self-start">
+                                <div class="ms_name">{{contact.name}}</div>
                                 <div class="ms_undername">Ultimo messaggio inviato</div>
                             </div>
                             <div class="ms_time">12:00</div>
-                        </div>
-                        <div class="ms_contact-box d-flex">
-                            <div class="ms_contact-image">
-                                <img src="img/avatar_1.jpg" alt="">
-                            </div>
-                            <div class="ms_box-text">
-                                <div class="ms_name">Michele</div>
-                                <div class="ms_undername">Ultimo messaggio inviato</div>
-                            </div>
-                            <div class="ms_time">12:00</div>
-                        </div>
-                        <div class="ms_contact-box d-flex">
-                            <div class="ms_contact-image">
-                                <img src="img/avatar_1.jpg" alt="">
-                            </div>
-                            <div class="ms_box-text">
-                                <div class="ms_name">Michele</div>
-                                <div class="ms_undername">Ultimo messaggio inviato</div>
-                            </div>
-                            <div class="ms_time">12:00</div>
-                        </div>
-                        <div class="ms_contact-box d-flex">
-                            <div class="ms_contact-image">
-                                <img src="img/avatar_1.jpg" alt="">
-                            </div>
-                            <div class="ms_box-text">
-                                <div class="ms_name">Michele</div>
-                                <div class="ms_undername">Ultimo messaggio inviato</div>
-                            </div>
-                            <div class="ms_time">12:00</div>
-                        </div>
-                        <div class="ms_contact-box d-flex">
-                            <div class="ms_contact-image">
-                                <img src="img/avatar_1.jpg" alt="">
-                            </div>
-                            <div class="ms_box-text">
-                                <div class="ms_name">Michele</div>
-                                <div class="ms_undername">Ultimo messaggio inviato</div>
-                            </div>
-                            <div class="ms_time">12:00</div>
-                        </div>
-                        <div class="ms_contact-box d-flex">
-                            <div class="ms_contact-image">
-                                <img src="img/avatar_1.jpg" alt="">
-                            </div>
-                            <div class="ms_box-text">
-                                <div class="ms_name">Michele</div>
-                                <div class="ms_undername">Ultimo messaggio inviato</div>
-                            </div>
-                            <div class="ms_time">12:00</div>
-                        </div>
-                        <div class="ms_contact-box d-flex">
-                            <div class="ms_contact-image">
-                                <img src="img/avatar_1.jpg" alt="">
-                            </div>
-                            <div class="ms_box-text">
-                                <div class="ms_name">Michele</div>
-                                <div class="ms_undername">Ultimo messaggio inviato</div>
-                            </div>
-                            <div class="ms_time">12:00</div>
-                        </div>
-                        <div class="ms_contact-box d-flex">
-                            <div class="ms_contact-image">
-                                <img src="img/avatar_1.jpg" alt="">
-                            </div>
-                            <div class="ms_box-text">
-                                <div class="ms_name">Michele</div>
-                                <div class="ms_undername">Ultimo messaggio inviato</div>
-                            </div>
-                            <div class="ms_time">12:00</div>
-                        </div>
+                        </div> 
                     </div>
                 </div>
                 <div class="col-9 ms_messages-section">
                     <div class="ms_messages-header d-flex align-items-center justify-content-between">
                         <div class="ms_photo-name d-flex align-items-center">
                             <div class="ms_profile-image">
-                                <img src="img/avatar_1.jpg" alt="">
+                                <img :src="`img/avatar${contacts[activeIndex].avatar}.jpg`" alt="">
                             </div>
                             <div>
                                 <div class="ms_profile-name">
-                                    Michele
+                                    {{contacts[activeIndex].name}}
                                 </div>
                                 <div class="ms_undername">Ultimo accesso oggi alle 21:30</div>
                             </div>
@@ -155,9 +85,9 @@
                         </div>
                     </div>
                     <div class="ms_main-messages">
-                        <div class="ms_message-line">
+                        <div class="ms_message-row send">
                             <div class="ms_message-square">
-                                CIAOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+                                CIAO
                             </div>
                         </div>
                     </div>

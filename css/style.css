@@ -160,8 +160,8 @@ img {
 
 .ms_main-messages {
     height: calc(100% - 2*var(--header-footer-height));
+    overflow-y: auto;
     background-image: url(../img/mine.jpg);
-    overflow-y: scroll;
 }
 
 .ms_footer-messages {
@@ -172,13 +172,40 @@ img {
     border-color: white;
 }
 
+.ms_message-row {
+    margin-bottom: 10px;
+    display: flex;
+    margin-top: 10px;
+}
+
 /* UTILITIES */
+
 .ms_message-square {
+    min-width: 25%;
     max-width: 50%;
     padding: 5px 10px;
     margin: 0 50px;
     border-radius: 7px;
+    word-wrap: break-word;
 
     /* debug */
     background-color: green;
+}
+
+.ms_message-row.received {
+    justify-content: start;
+}
+
+.ms_message-row.send {
+    justify-content: end;
+}
+
+.send .message {
+    /* debug */
+    background-color: lightgreen;
+}
+
+.received .message {
+    /* debug */
+    background-color: white;
 }
