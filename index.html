@@ -88,17 +88,16 @@
                         <div class="ms_message-row" v-for="message in contacts[activeIndex].messages" :class="`${message.status}`">
                             <div class="ms_message-square">
                                 {{message.message}}
+                                <div class="ms_chat-time">
+                                    {{ formatDate(message.date) }}
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div class="ms_footer-messages">
                         <div class="input-group py-2">
                             <a href="" class="input-group-text ms_footer-input"><i class="fa-regular fa-face-smile"></i></a>
-                            <input type="text" class="form-control ms_footer-input" placeholder="Scrivi un messaggio" @keyup.enter="addNewMessage"
-                            
-                            v-model="newMessage"
-                            
-                            >
+                            <input type="text" class="form-control ms_footer-input" placeholder="Scrivi un messaggio" v-model.trim="newMessage" @keyup.enter="addNewMessage">
                             <a href="" class="input-group-text ms_footer-input">
                                 <i class="fa-solid fa-microphone"></i>
                             </a>
@@ -108,6 +107,9 @@
             </div>
         </div>
     </div>
+
+    <!-- LUXON SCRIPT -->
+    <script src="https://cdn.jsdelivr.net/npm/luxon@3.3.0/build/global/luxon.min.js"></script>
     <!-- CUSTOM JS SCRIPT -->
     <script src="js/script.js"></script>
 </body>

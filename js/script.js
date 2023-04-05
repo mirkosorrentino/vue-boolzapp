@@ -1,5 +1,8 @@
 const { createApp } = Vue;
 
+const dt = luxon.DateTime;
+console.log(dt.now().setLocale('it').toLocaleString(dt.TIME_24_SIMPLE));
+
 createApp({
     data(){
         return{
@@ -177,8 +180,18 @@ createApp({
             this.activeIndex = index;
         },
 
+        formatDate(dateStr) {
+            const myDate = dt.fromFormat(dateStr, "dd/MM/yyyy hh:mm:ss");
+            return (myDate.toLocaleString(dt.TIME_24_SIMPLE));
+        },
+
         addNewMessage() {
-            
+            const message = {
+                message: this.newMessage,
+                date: dt.now().setLocale('it').toFormat("dd/MM/yyyy hh:mm:ss"),
+                status: 'sent'
+            }
+            this.contacts[this.activeIndex].messages.push(message)
         }
-    },
+    }
 }).mount("#app")
