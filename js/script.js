@@ -185,16 +185,32 @@ createApp({
             return (myDate.setLocale('it').toLocaleString(dt.TIME_24_SIMPLE));
         },
 
+        sendMessage () {
+            if (this.newMessage.length > 0) {
+                this.addNewMessage();
+                this.getAnswer();
+            };
+        },
+
         addNewMessage() {
-            if(this.newMessage.length > 0) {
-                const message = {
-                    message: this.newMessage,
-                    date: dt.now().setLocale('it').toFormat("dd/MM/yyyy hh:mm:ss"),
-                    status: 'sent'
-                }
-                this.contacts[this.activeIndex].messages.push(message)
-                this.newMessage = "";
+            const message = {
+                message: this.newMessage,
+                date: dt.now().setLocale('it').toFormat("dd/MM/yyyy hh:mm:ss"),
+                status: 'sent'
             }
+            this.contacts[this.activeIndex].messages.push(message)
+            this.newMessage = "";
+        },
+
+        getAnswer() {
+            setTimeout (() => {
+                const message = {
+                    message: "ok",
+                    date: dt.now().setLocale('it').toFormat("dd/MM/yyyy hh:mm:ss"),
+                    status: 'received'
+                };
+                this.contacts[this.activeIndex].messages.push(message) 
+            }, 1000)
         }
     }
 }).mount("#app")
