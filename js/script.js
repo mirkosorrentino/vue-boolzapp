@@ -182,16 +182,19 @@ createApp({
 
         formatDate(dateStr) {
             const myDate = dt.fromFormat(dateStr, "dd/MM/yyyy hh:mm:ss");
-            return (myDate.toLocaleString(dt.TIME_24_SIMPLE));
+            return (myDate.setLocale('it').toLocaleString(dt.TIME_24_SIMPLE));
         },
 
         addNewMessage() {
-            const message = {
-                message: this.newMessage,
-                date: dt.now().setLocale('it').toFormat("dd/MM/yyyy hh:mm:ss"),
-                status: 'sent'
+            if(this.newMessage.length > 0) {
+                const message = {
+                    message: this.newMessage,
+                    date: dt.now().setLocale('it').toFormat("dd/MM/yyyy hh:mm:ss"),
+                    status: 'sent'
+                }
+                this.contacts[this.activeIndex].messages.push(message)
+                this.newMessage = "";
             }
-            this.contacts[this.activeIndex].messages.push(message)
         }
     }
 }).mount("#app")
